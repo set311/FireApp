@@ -7,10 +7,9 @@
 //
 
 #import "DashboardViewController.h"
+#import <CTAssetsPickerController.h>
 
-
-
-@interface DashboardViewController ()
+@interface DashboardViewController ()<CTAssetsPickerControllerDelegate>
 
 @end
 
@@ -23,7 +22,22 @@
 
 -(void)cmdAddPhoto
 {
+    CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+    picker.delegate = self;
+    picker.assetsFilter = [ALAssetsFilter allPhotos];
+    picker.title = @"Pick photos";
+    [self presentViewController:picker animated:YES completion:nil];
+}
 
+
+- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
+{
+
+}
+
+- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(ALAsset *)asset
+{
+    return (picker.selectedAssets.count < 5);
 }
 
 @end

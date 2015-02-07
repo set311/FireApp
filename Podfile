@@ -7,7 +7,7 @@ target "fireApp" do
 
 pod 'Firebase', '>= 2.1.2'
 pod 'Facebook-iOS-SDK'
-
+pod 'CTAssetsPickerController',  '~> 2.9.0'
 end
 
 target "fireAppTests" do
