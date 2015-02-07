@@ -25,6 +25,8 @@
     
     self.viewController = [ViewController new];
     
+    [self.viewController.view setBackgroundColor:[UIColor whiteColor]];
+    
     [self.window setRootViewController:self.viewController];
     
     [self.window makeKeyAndVisible];
