@@ -6,6 +6,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target "fireApp" do
 
 pod 'Firebase', '>= 2.1.2'
+pod 'Facebook-iOS-SDK'
 
 end
 
