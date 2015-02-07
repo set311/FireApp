@@ -43,6 +43,7 @@
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
 {
     NSLog(@"FB: logged out");
+    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate deauthToFirebase];
 }
