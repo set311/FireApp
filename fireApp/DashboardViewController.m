@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)cmdAddPhoto
+-(IBAction)cmdAddPhoto:(id)sender
 {
     CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
     picker.delegate = self;

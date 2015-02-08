@@ -1,5 +1,5 @@
 //
-//  DashboardViewController.h
+//  MainNavigaionController.h
 //  fireApp
 //
 //  Created by Jesus Cagide on 2/7/15.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface DashboardViewController : BaseViewController
+@interface MainNavigaionController : UINavigationController
 
 @end

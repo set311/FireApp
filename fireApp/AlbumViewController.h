@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AlbumViewController : UIViewController
+#import "BaseViewController.h"
+@interface AlbumViewController : BaseViewController
 
 @end

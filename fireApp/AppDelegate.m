@@ -10,14 +10,26 @@
 #import <Firebase/Firebase.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "ViewController.h"
+#import "MainNavigaionController.h"
+#import "AlbumViewController.h"
+#import "LoginViewController.h"
+#import "DashboardViewController.h"
+
 
 @interface AppDelegate ()
+
 @property(nonatomic, strong)ViewController *viewController;
+
+@property(nonatomic, strong)LoginViewController *loginViewController;
+
+@property(nonatomic, strong)DashboardViewController *dashBoardViewController;
+@property(nonatomic, strong) AlbumViewController *albumViewController;
+
+@property(nonatomic, strong) MainNavigaionController *navigationContrtoller;
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -25,9 +37,19 @@
     
     self.viewController = [ViewController new];
     
-    [self.viewController.view setBackgroundColor:[UIColor whiteColor]];
+    self.dashBoardViewController = [DashboardViewController new];
+    self.loginViewController = [LoginViewController new];
+    self.albumViewController = [AlbumViewController new];
     
-    [self.window setRootViewController:self.viewController];
+    self.navigationContrtoller = [[MainNavigaionController alloc] initWithRootViewController:self.loginViewController];
+    
+    
+    [self.loginViewController setMainRepresentationHandler:self.navigationContrtoller];
+
+    
+    //[self.viewController.view setBackgroundColor:[UIColor whiteColor]];
+    
+    [self.window setRootViewController:self.navigationContrtoller];
     
     [self.window makeKeyAndVisible];
     
