@@ -22,7 +22,7 @@
                                       target:self
                                       action:@selector(cmdCreateAlbum)];
     self.navigationItem.rightBarButtonItem = createButton;
-    //[self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+  
 }
 
 -(void)cmdCreateAlbum
