@@ -43,7 +43,6 @@
 - (void)setVisible:(UIViewController<IRepresentationHandler> *)controller {
            if( [controller isKindOfClass:[LoginViewController class]])
             [self pushViewController:self.albumViewController animated:YES];
-        
             if( [controller isKindOfClass:[AlbumViewController class]])
                 [self pushViewController:self.dashBoardViewController animated:YES];
 }

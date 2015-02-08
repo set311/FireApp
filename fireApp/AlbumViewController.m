@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    UIBarButtonItem *createButton = [[UIBarButtonItem alloc]
+                                      initWithTitle:@"Create"
+                                      style:UIBarButtonItemStylePlain
+                                      target:self
+                                      action:@selector(cmdCreateAlbum)];
+    self.navigationItem.rightBarButtonItem = createButton;
+    //[self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
 -(void)cmdCreateAlbum
