@@ -25,6 +25,19 @@
     [self loadFacebookView];
 }
 
+- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
+    int i = 0;
+}
+
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id <FBGraphUser>)user {
+    NSLog(user.first_name);
+    int i = 0;
+}
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    int i = 0;
+}
+
 // load the facebook login button
 - (void)loadFacebookView
 {

@@ -59,7 +59,7 @@
     
     //[self.viewController.view setBackgroundColor:[UIColor whiteColor]];
     
-    [self.window setRootViewController:self.navigationContrtoller];
+    [self.window setRootViewController:self.viewController];
     
     [self.window makeKeyAndVisible];
     
@@ -87,6 +87,20 @@
     } else {
         NSLog(@"No access token provided.");
     }
+}
+
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
+    int i = 0;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    return NO;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    int i = 0;
+    return NO;
 }
 
 // notify firebase that user has logged out
