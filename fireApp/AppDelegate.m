@@ -43,9 +43,19 @@
     
     self.navigationContrtoller = [[MainNavigaionController alloc] initWithRootViewController:self.loginViewController];
     
+    [self.loginViewController setMainRepresentationHandler:self.navigationContrtoller];
+    
+    [self.dashBoardViewController setMainRepresentationHandler:self.navigationContrtoller];
+    
+    [self.albumViewController setMainRepresentationHandler:self.navigationContrtoller];
     
     [self.loginViewController setMainRepresentationHandler:self.navigationContrtoller];
 
+    [self.navigationContrtoller setAlbumViewController:self.albumViewController];
+    
+    [self.navigationContrtoller setDashBoardViewController:self.dashBoardViewController];
+    
+    [self.navigationContrtoller setLoginViewController:self.loginViewController];
     
     //[self.viewController.view setBackgroundColor:[UIColor whiteColor]];
     

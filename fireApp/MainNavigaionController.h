@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IMainRepresentationHandler.h"
 
-@interface MainNavigaionController : UINavigationController
+#import "AlbumViewController.h"
+#import "LoginViewController.h"
+#import "DashboardViewController.h"
+
+@interface MainNavigaionController : UINavigationController<IMainRepresentationHandler>
+
+
+@property(nonatomic, strong)LoginViewController *loginViewController;
+
+@property(nonatomic, strong)DashboardViewController *dashBoardViewController;
+@property(nonatomic, strong) AlbumViewController *albumViewController;
 
 @end

@@ -21,7 +21,7 @@
 
 -(void)cmdCreateAlbum
 {
-
+     [self.mainRepresentationHandler setVisible:self];
 }
 
 @end

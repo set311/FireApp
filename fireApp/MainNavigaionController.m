@@ -9,7 +9,10 @@
 #import "MainNavigaionController.h"
 #import "IRepresentationHandler.h"
 
+
+
 @interface MainNavigaionController()<UINavigationControllerDelegate>
+
 
 @end
 
@@ -38,15 +41,11 @@
 }
 
 - (void)setVisible:(UIViewController<IRepresentationHandler> *)controller {
-    
-    if(self.visibleViewController != controller) {
+           if( [controller isKindOfClass:[LoginViewController class]])
+            [self pushViewController:self.albumViewController animated:YES];
         
-        if([self.viewControllers containsObject: controller]) {
-            [self popToViewController:controller animated:YES];
-        }else{
-            [self pushViewController:controller animated:YES];
-        }
-    }
+            if( [controller isKindOfClass:[AlbumViewController class]])
+                [self pushViewController:self.dashBoardViewController animated:YES];
 }
 
 @end

@@ -19,7 +19,7 @@
 }
 
 -(IBAction)cmdLogin:(id)sender{
-
+    [self.mainRepresentationHandler setVisible:self];
 }
 
 @end
